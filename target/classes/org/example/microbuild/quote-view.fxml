@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="760.0" prefWidth="660.0" stylesheets="@quote.css" styleClass="quote-root" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.microbuild.QuoteController">
+    <top>
+        <StackPane styleClass="quote-header" BorderPane.alignment="CENTER">
+            <children>
+                <Label styleClass="quote-title" text="PC Build Quotation &amp; Summary" />
+            </children>
+        </StackPane>
+    </top>
+    <center>
+        <VBox spacing="12.0" styleClass="card" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="24.0" right="24.0" top="20.0" />
+            </BorderPane.margin>
+            <padding>
+                <Insets bottom="20.0" left="22.0" right="22.0" top="20.0" />
+            </padding>
+            <children>
+                <GridPane hgap="10.0" vgap="9.0">
+                    <columnConstraints>
+                        <ColumnConstraints minWidth="100.0" prefWidth="110.0" />
+                        <ColumnConstraints hgrow="ALWAYS" />
+                        <ColumnConstraints minWidth="110.0" prefWidth="120.0" />
+                    </columnConstraints>
+                    <children>
+                        <Label styleClass="part-label" text="CPU" GridPane.rowIndex="0" />
+                        <TextField fx:id="cpuField" editable="false" promptText="Not selected" styleClass="part-box" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <TextField fx:id="cpuPrice" editable="false" promptText="PHP 0" styleClass="price-box" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+
+                        <Label styleClass="part-label" text="Motherboard" GridPane.rowIndex="1" />
+                        <TextField fx:id="moboField" editable="false" promptText="Not selected" styleClass="part-box" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="moboPrice" editable="false" promptText="PHP 0" styleClass="price-box" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+                        <Label styleClass="part-label" text="RAM" GridPane.rowIndex="2" />
+                        <TextField fx:id="ramField" editable="false" promptText="Not selected" styleClass="part-box" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="ramPrice" editable="false" promptText="PHP 0" styleClass="price-box" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+
+                        <Label styleClass="part-label" text="Graphics Card" GridPane.rowIndex="3" />
+                        <TextField fx:id="gpuField" editable="false" promptText="Not selected" styleClass="part-box" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="gpuPrice" editable="false" promptText="PHP 0" styleClass="price-box" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+                        <Label styleClass="part-label" text="Power Supply" GridPane.rowIndex="4" />
+                        <TextField fx:id="psuField" editable="false" promptText="Not selected" styleClass="part-box" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="psuPrice" editable="false" promptText="PHP 0" styleClass="price-box" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+
+                        <Label styleClass="part-label" text="Storage" GridPane.rowIndex="5" />
+                        <TextField fx:id="storageField" editable="false" promptText="Not selected" styleClass="part-box" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField fx:id="storagePrice" editable="false" promptText="PHP 0" styleClass="price-box" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+
+                        <Label styleClass="part-label" text="PC Case" GridPane.rowIndex="6" />
+                        <TextField fx:id="caseField" editable="false" promptText="Not selected" styleClass="part-box" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextField fx:id="casePrice" editable="false" promptText="PHP 0" styleClass="price-box" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                    </children>
+                </GridPane>
+                <Separator />
+                <GridPane hgap="10.0" vgap="9.0">
+                    <columnConstraints>
+                        <ColumnConstraints minWidth="100.0" prefWidth="110.0" />
+                        <ColumnConstraints hgrow="ALWAYS" />
+                    </columnConstraints>
+                    <children>
+                        <Label styleClass="part-label" text="Estimated Power" GridPane.rowIndex="0" />
+                        <TextField fx:id="powerField" editable="false" styleClass="result-box" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                        <Label styleClass="part-label" text="Recommended PSU" GridPane.rowIndex="1" />
+                        <TextField fx:id="psuRecField" editable="false" styleClass="result-box" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                        <Label styleClass="part-label" text="Total Cost" GridPane.rowIndex="2" />
+                        <TextField fx:id="totalField" editable="false" styleClass="total-box" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                        <Label styleClass="part-label" text="Compatibility" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+                        <TextArea fx:id="statusArea" editable="false" prefHeight="95.0" styleClass="status-box" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    </children>
+                </GridPane>
+            </children>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="12.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="10.0" left="24.0" right="24.0" top="4.0" />
+            </padding>
+            <children>
+                <Button onAction="#onClear" styleClass="action-btn" text="Clear" />
+                <Button onAction="#onBack" styleClass="action-btn" text="← Back to Home" />
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,74 @@
+.quote-root {
+    -fx-background-color: #0f0040;
+    -fx-font-family: "Segoe UI", "Arial";
+}
+
+.quote-header {
+    -fx-background-color: #1a0018;
+    -fx-padding: 18 0 18 0;
+}
+
+.quote-title {
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+}
+
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 6;
+}
+
+.part-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #444444;
+}
+
+.part-box, .price-box, .result-box {
+    -fx-background-color: #f7f7f9;
+    -fx-background-radius: 6;
+    -fx-border-color: #dcdce4;
+    -fx-border-radius: 6;
+    -fx-font-size: 12px;
+    -fx-text-fill: #222222;
+}
+
+.price-box {
+    -fx-font-weight: bold;
+    -fx-alignment: center-right;
+}
+
+.total-box {
+    -fx-background-color: #f7f7f9;
+    -fx-background-radius: 6;
+    -fx-border-color: #f24444;
+    -fx-border-radius: 6;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0f0040;
+}
+
+.status-box {
+    -fx-font-size: 12px;
+}
+
+.status-pass .text {
+    -fx-fill: #1a8a3a;
+}
+
+.status-fail .text {
+    -fx-fill: #f24444;
+}
+
+.action-btn {
+    -fx-background-color: #f24444;
+    -fx-background-radius: 4;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-padding: 10 22 10 22;
+    -fx-cursor: hand;
+}
+
+.action-btn:hover {
+    -fx-background-color: #d93636;
+}
